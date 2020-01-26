@@ -1,11 +1,15 @@
 import React from 'react';
-import './index.scss';
+import styles from './index.module.scss';
+import { HomeButton } from '../../components/HomeButton';
 
 export const Bowl = () => (
   <>
-    <div className="bowl">
-      <div className="bowl__top"></div>
-      <div className="bowl__bottom"></div>
+    <HomeButton />
+    <div className={styles.container}>
+      <div className={styles.bowl}>
+        <div className={styles.bowl__top} />
+        <div className={styles.bowl__bottom} />
+      </div>
     </div>
   </>
 );

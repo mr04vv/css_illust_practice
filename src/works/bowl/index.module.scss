@@ -1,6 +1,5 @@
 body {
   background: #ffedab;
-  padding: 100px 0 0 120px;
 }
 
 %bowl,
@@ -30,4 +29,10 @@ body {
     border-radius: 100px / 25px;
     background: #a25930;
   }
+}
+
+.container {
+  position: relative;
+  top: 100px;
+  left: 100px;
 }
