@@ -73,8 +73,9 @@
   position: relative;
   width: 16px;
   height: 16px;
-  background: #49332d;
+  background: #ddbba5;
   margin: 0 auto;
+  z-index: 4;
   top: 124px;
   border-radius: 8px;
 }
@@ -83,23 +84,23 @@
   position: relative;
   &:before {
     content: ' ';
-    width: 14px;
+    width: 8px;
     height: 20px;
-    border-radius: 120% 0 0 70% / 70%;
-    border: solid 1px #49332d;
+    border-radius: 120% 0 0 10% / 70% 0 0 10%;
+    border: solid 1px #ddbba5;
     border-width: 3px 0 3px 3px;
-    transform: rotate(-115deg);
-    @include absolute($top: 110px, $left: 80px);
+    transform: rotate(-165deg);
+    @include absolute($top: 112px, $left: 90px);
   }
   &:after {
     content: ' ';
-    width: 14px;
+    width: 8px;
     height: 20px;
-    border-radius: 70% 0 0 120% / 70%;
-    border: solid 1px #49332d;
+    border-radius: 10% 0 0 120% / 10% 0 0 70%;
+    border: solid 1px #ddbba5;
     border-width: 3px 0 3px 3px;
-    transform: rotate(-65deg);
-    @include absolute($top: 110px, $right: 80px);
+    transform: rotate(-15deg);
+    @include absolute($top: 112px, $right: 90px);
   }
 }
 
@@ -133,7 +134,7 @@
     content: ' ';
     width: 56px;
     height: 2px;
-    background: #49332d;
+    background: #fafafa;
     margin: 0 auto;
     top: 124px;
     border-radius: 13px;
@@ -144,7 +145,7 @@
     content: ' ';
     width: 56px;
     height: 2px;
-    background: #49332d;
+    background: #fafafa;
     margin: 0 auto;
     top: 124px;
     border-radius: 13px;
@@ -159,7 +160,7 @@
     content: ' ';
     width: 56px;
     height: 2px;
-    background: #49332d;
+    background: #fafafa;
     margin: 0 auto;
     top: 124px;
     border-radius: 13px;
@@ -170,7 +171,7 @@
     content: ' ';
     width: 56px;
     height: 2px;
-    background: #49332d;
+    background: #fafafa;
     margin: 0 auto;
     top: 124px;
     border-radius: 13px;
@@ -185,7 +186,7 @@
     content: ' ';
     width: 52px;
     height: 2px;
-    background: #49332d;
+    background: #fafafa;
     margin: 0 auto;
     top: 124px;
     border-radius: 13px;
@@ -196,7 +197,7 @@
     content: ' ';
     width: 52px;
     height: 2px;
-    background: #49332d;
+    background: #fafafa;
     margin: 0 auto;
     top: 124px;
     border-radius: 13px;
@@ -211,7 +212,7 @@
     content: ' ';
     width: 130px;
     height: 150px;
-    background: #636363;
+    background: #252525;
     margin: 0 auto;
     top: 124px;
     border-radius: 6% 100% 0%;
@@ -223,7 +224,7 @@
     content: ' ';
     width: 130px;
     height: 150px;
-    background: #636363;
+    background: #252525;
     margin: 0 auto;
     top: 124px;
     border-radius: 100% 6% 94%;
@@ -267,23 +268,23 @@
     content: ' ';
     width: 200px;
     height: 200px;
-    background: #636363;
+    background: #252525;
     margin: 0 auto;
     top: 124px;
-    border-radius: 100% 20% 50%;
+    border-radius: 50% 20% 0%;
     transform: rotate(-50deg);
-    @include absolute($top: -80px, $left: -100px);
+    @include absolute($top: -60px, $left: -100px);
   }
   &:after {
     content: ' ';
     width: 200px;
     height: 200px;
-    background: #636363;
+    background: #252525;
     margin: 0 auto;
     top: 124px;
-    border-radius: 100% 80% 40%;
+    border-radius: 50% 0% 20%;
     transform: rotate(50deg);
-    @include absolute($top: -80px, $right: -100px);
+    @include absolute($top: -60px, $right: -100px);
   }
 }
 
