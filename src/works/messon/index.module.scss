@@ -1,0 +1,412 @@
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  @if $top != null {
+    top: $top;
+  }
+  @if $right != null {
+    right: $right;
+  }
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+  @if $left != null {
+    left: $left;
+  }
+}
+
+%anpan,
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: #dca17b;
+  border-radius: 100px;
+}
+
+.sikaku {
+  position: relative;
+  width: 18px;
+  height: 12px;
+  background-color: #f1eeee;
+  top: -140px;
+  left: 92px;
+  border-radius: 2px;
+}
+
+.sikaku2 {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #f1eeee;
+  top: -150px;
+  left: 28px;
+  border-radius: 2px;
+}
+
+.sikaku3 {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #f1eeee;
+  top: -162px;
+  left: 160px;
+  border-radius: 2px;
+}
+
+.mayu {
+  position: relative;
+  width: 22px;
+  height: 3px;
+  background-color: black;
+  top: -204px;
+  left: 66px;
+}
+
+.mayu2 {
+  position: relative;
+  width: 22px;
+  height: 3px;
+  background-color: black;
+  top: -207px;
+  left: 114px;
+}
+
+.eye {
+  position: relative;
+  width: 20px;
+  height: 32px;
+  top: 44px;
+  left: 68px;
+  background-color: black;
+  border-radius: 40px;
+}
+
+.eye2 {
+  position: relative;
+  width: 20px;
+  height: 32px;
+  top: 12px;
+  left: 115px;
+  background-color: black;
+  border-radius: 40px;
+}
+
+.nose {
+  position: relative;
+  width: 56px;
+  height: 52px;
+  top: 24px;
+  left: 73px;
+  background-color: red;
+  border-radius: 40px;
+}
+
+.hoppe1 {
+  position: relative;
+  width: 60px;
+  top: -30px;
+  left: 12px;
+  height: 60px;
+  background-color: #ff8100;
+  border-radius: 40px;
+}
+
+.hoppe2 {
+  position: relative;
+  width: 60px;
+  left: 130px;
+  top: -90px;
+  height: 60px;
+  background-color: #ff8100;
+  border-radius: 40px;
+}
+
+.mouth {
+  position: relative;
+  width: 70px;
+  height: 2px;
+  background-color: black;
+  top: -74px;
+  left: 66px;
+}
+
+%messon,
+.messon__head {
+  //カップの台形
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 180px;
+  border-radius: 90px 90px 84px 84px;
+  background: lightblue;
+}
+
+.messon__eye {
+  position: relative;
+  &:before {
+    content: ' ';
+    border-radius: 10px / 12px;
+    width: 20px;
+    height: 24px;
+    background: #f8e005;
+    border: solid thin #000000;
+    @include absolute($top: 90px, $left: 54px);
+  }
+  &:after {
+    content: ' ';
+    border-radius: 10px / 12px;
+    width: 20px;
+    height: 24px;
+    background: #f8e005;
+    border: solid thin #000000;
+    @include absolute($top: 90px, $right: 54px);
+  }
+}
+
+.messon__eye_inner {
+  position: relative;
+  &:before {
+    content: ' ';
+    border-radius: 10px / 12px;
+    width: 18px;
+    background: #050505;
+    height: 22px;
+    z-index: 3;
+    @include absolute($top: 91px, $left: 56px);
+  }
+  &:after {
+    content: ' ';
+    border-radius: 10px / 12px;
+    width: 18px;
+    background: #050505;
+    height: 22px;
+    z-index: 3;
+    @include absolute($top: 91px, $right: 56px);
+  }
+}
+
+.messon__nose {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: #ddbba5;
+  margin: 0 auto;
+  z-index: 4;
+  top: 124px;
+  border-radius: 8px;
+}
+
+.messon__mouth {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 8px;
+    height: 20px;
+    border-radius: 120% 0 0 10% / 70% 0 0 10%;
+    border: solid 1px #ddbba5;
+    border-width: 3px 0 3px 3px;
+    transform: rotate(-165deg);
+    @include absolute($top: 112px, $left: 90px);
+  }
+  &:after {
+    content: ' ';
+    width: 8px;
+    height: 20px;
+    border-radius: 10% 0 0 120% / 10% 0 0 70%;
+    border: solid 1px #ddbba5;
+    border-width: 3px 0 3px 3px;
+    transform: rotate(-15deg);
+    @include absolute($top: 112px, $right: 90px);
+  }
+}
+
+.messon__cheek {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 26px;
+    height: 26px;
+    background: #ff9e9ec0;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 13px;
+    @include absolute($top: 102px, $left: 40px);
+  }
+  &:after {
+    content: ' ';
+    width: 26px;
+    height: 26px;
+    background: #ff9e9ec0;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 13px;
+    @include absolute($top: 102px, $right: 40px);
+  }
+}
+
+.messon__beard1 {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 56px;
+    height: 2px;
+    background: #fafafa;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 13px;
+    transform: rotate(8deg);
+    @include absolute($top: -62px, $left: 0px);
+  }
+  &:after {
+    content: ' ';
+    width: 56px;
+    height: 2px;
+    background: #fafafa;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 13px;
+    transform: rotate(-8deg);
+    @include absolute($top: -62px, $right: 0px);
+  }
+}
+
+.messon__beard2 {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 56px;
+    height: 2px;
+    background: #fafafa;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 13px;
+    transform: rotate(-2deg);
+    @include absolute($top: -50px, $left: 0px);
+  }
+  &:after {
+    content: ' ';
+    width: 56px;
+    height: 2px;
+    background: #fafafa;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 13px;
+    transform: rotate(2deg);
+    @include absolute($top: -50px, $right: 0px);
+  }
+}
+
+.messon__beard3 {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 52px;
+    height: 2px;
+    background: #fafafa;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 13px;
+    transform: rotate(-10deg);
+    @include absolute($top: -40px, $left: 6px);
+  }
+  &:after {
+    content: ' ';
+    width: 52px;
+    height: 2px;
+    background: #fafafa;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 13px;
+    transform: rotate(10deg);
+    @include absolute($top: -40px, $right: 6px);
+  }
+}
+
+.messon__ear_wrap {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 130px;
+    height: 150px;
+    background: #252525;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 6% 100% 0%;
+    z-index: -2;
+    transform: rotate(4deg);
+    @include absolute($top: 6px, $left: -6px);
+  }
+  &:after {
+    content: ' ';
+    width: 130px;
+    height: 150px;
+    background: #252525;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 100% 6% 94%;
+    z-index: -2;
+    transform: rotate(-4deg);
+    @include absolute($top: 6px, $right: -6px);
+  }
+}
+
+.messon__ear_inner {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 80px;
+    height: 90px;
+    background: #e9d3b7;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 6% 100% 0%;
+    z-index: -1;
+    transform: rotate(4deg);
+    @include absolute($top: 22px, $left: 8px);
+  }
+  &:after {
+    content: ' ';
+    width: 80px;
+    height: 90px;
+    background: #e9d3b7;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 100% 6% 94%;
+    z-index: -1;
+    transform: rotate(-4deg);
+    @include absolute($top: 22px, $right: 8px);
+  }
+}
+
+.messon__hair {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 200px;
+    height: 200px;
+    background: lightblue;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 50% 20% 0%;
+    transform: rotate(-50deg);
+    @include absolute($top: -60px, $left: -100px);
+  }
+  &:after {
+    content: ' ';
+    width: 200px;
+    height: 200px;
+    background: lightblue;
+    margin: 0 auto;
+    top: 124px;
+    border-radius: 50% 0% 20%;
+    transform: rotate(50deg);
+    @include absolute($top: -60px, $right: -100px);
+  }
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  top: 100px;
+  left: 100px;
+}

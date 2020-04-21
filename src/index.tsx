@@ -6,6 +6,7 @@ import { Bowl } from './works/bowl';
 import { Top } from './pages/top';
 import { StylesProvider } from '@material-ui/core';
 import { Cat } from './works/cat';
+import { Messon } from './works/messon';
 
 ReactDOM.render(
   <StylesProvider injectFirst>
@@ -14,6 +15,7 @@ ReactDOM.render(
         <Route exact path="/" component={Top} />
         <Route exact path="/works/bowl" component={Bowl} />
         <Route exact path="/works/cat" component={Cat} />
+        <Route exact path="/works/kogepanman" component={Messon} />
       </Switch>
     </Router>
   </StylesProvider>,

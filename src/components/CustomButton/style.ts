@@ -9,27 +9,6 @@ const ButtonStyle = css`
   background: #fff;
   color: #fff;
   position: relative;
-
-  ::after {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    border-radius: 30px;
-    content: '';
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-  :hover:after {
-    height: 0;
-    left: 50%;
-    top: 50%;
-    width: 0;
-  }
 `;
 
 export const CustomGreenButton: React.FC = styled(Button)`
@@ -64,12 +43,9 @@ export const CustomOrangeButton: React.FC = styled(Button)`
   background-color: ${ORANGE_COLOR};
   color: ${FONT_COLOR_WHITE};
   border: ${ORANGE_COLOR} solid 2px;
-  ::after {
-    background-color: ${ORANGE_COLOR};
-  }
   :hover {
-    color: ${ORANGE_COLOR};
-    background: rgba(255,255,255,0.08);
+    background-color: ${ORANGE_COLOR};
+    opacity: 0.8;
   }
 `;
 
